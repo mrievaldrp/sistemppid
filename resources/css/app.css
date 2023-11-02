@@ -1,0 +1,6 @@
+.float-top-right {
+   position: fixed;
+   top: 10px; /* Sesuaikan dengan posisi yang Anda inginkan */
+   right: 10px; /* Sesuaikan dengan posisi yang Anda inginkan */
+   z-index: 9999; /* Atur sesuai kebutuhan */
+ }
