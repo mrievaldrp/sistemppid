@@ -16,9 +16,13 @@ class EmployeeImport implements ToModel
     {
         return new Employee([
             'nama' => $row[1], // Ganti '=' dengan '=>'
-            'jeniskelamin' => $row[2], // Sesuaikan indeks kolom
-            'notelpon' => $row[3],    // Sesuaikan indeks kolom
-            'foto' => $row[4],        // Sesuaikan indeks kolom
+            'nomorsurat' => $row[2],
+            'tanggalsurat' => $row[3],
+            'tgl_kgt' => $row[4],
+            'perihal' =>  $row[5],
+            'jenis_layanan' => $row[6],
+            // Sesuaikan indeks kolom
+            // 'foto' => $row[4],        // Sesuaikan indeks kolom
         ]);
     }
 }

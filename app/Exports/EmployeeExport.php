@@ -8,10 +8,11 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 class EmployeeExport implements FromCollection
 {
     /**
-    * @return \Illuminate\Support\Collection
-    */
+     * @return \Illuminate\Support\Collection
+     */
     public function collection()
     {
-        return Employee::all();
+        return Employee::select('id', 'nama', 'nomorsurat', 'tanggalsurat', 'tgl_kgt', 'perihal', 'jenis_layanan') // Add other columns you want to include
+            ->get();
     }
 }

@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->enum('jeniskelamin', ['cowo', 'cewe']);
-            $table->bigInteger('notelpon');
-            $table->string('foto');
+            $table->string('nomorsurat');
+            $table->dateTime('tanggalsurat')->nullable();
+            $table->string('jumlahminta');
+            $table->enum('jenis_layanan', ['Peliputan', 'Diseminasi']);
+
+
             $table->timestamps();
         });
     }
